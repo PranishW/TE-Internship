@@ -1,0 +1,327 @@
+
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=1.5in,right=1in,top=1in,bottom=1.25in]{geometry}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+ \usepackage{booktabs}
+ \pagenumbering{arabic}
+\usepackage[a4paper,left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,fit,arrows,calc}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\rhead{ \fancyplain{}{Web Development Internship} }
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+  \draw[line width = 1pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+\end{tikzpicture}
+\begin{center}
+\textbf{\large SCTR's Pune Institute of Computer Technology}
+\linebreak
+\textbf{\large Dhankawadi, Pune}
+\vspace{10 mm}
+
+\textbf {\large AN INTERNSHIP REPORT ON}
+\linebreak 
+\linebreak 
+\Large{Web Development Internship at TechGigs LLP}
+\vspace{15 mm}
+\linebreak
+
+\textbf{\large{SUBMITTED BY}}
+
+Name: Pranish Warke
+
+Class:  TE 11
+
+Roll no:\hspace{2mm} 33381
+\linebreak
+\linebreak
+\textbf{Under the guidance of}
+\linebreak
+Mr. Sachin S. Pande
+\linebreak
+\linebreak 
+\linebreak
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.6]{logo.jpg}
+\end{center}
+\label{overflow}
+\end{figure}
+\textbf{\linebreak \linebreak  \large{DEPARTMENT OF INFORMATION TECHNOLOGY}}
+
+\large{ACADEMIC YEAR 2022-23}
+\end{center}
+\end{titlepage}
+\pagebreak
+\begin{titlepage}
+\begin{center}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.6]{logo.jpg}
+\end{center}
+\label{overflow}
+\end{figure}
+
+\textbf{\linebreak \large{DEPARTMENT OF INFORMATION TECHNOLOGY}}
+\linebreak
+\linebreak
+\textbf{SCTR's Pune Institute of Computer Technology}
+\linebreak
+\textbf{Dhankawadi, Pune}
+\linebreak
+\textbf{Maharashtra 411043}
+\linebreak
+\linebreak
+\textbf{\Large{CERTIFICATE}}
+\linebreak
+\linebreak
+\linebreak
+ This is to certify that the SPPU Curriculum-based internship report entitled
+\linebreak
+\textbf{“Web Development Internship at TechGigs LLP”}
+\linebreak
+\linebreak
+Submitted by
+\linebreak
+\textit{Pranish Prashant Warke} \hspace{2mm} 
+\linebreak \textit{Roll No : 33381}
+\linebreak
+\linebreak
+has satisfactorily completed the curriculum-based internship under the guidance of \textit{Mr. Sachin S. Pande } towards the partial fulfillment of third year
+Information Technology Semester VI, Academic Year 2022-23 of Savitribai Phule Pune University.
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\begin{table}[h]
+\begin{tabular}{ccc}
+\textbf{Mr. Sachin S. Pande}   &                        &  \hspace{36mm}\textbf{Dr. Archana S. Ghotkar}\\
+Internship Guide      &                     &    \hspace{36mm} Head \\
+PICT, Pune          &                         &       \hspace{28mm} Department of Information Technology \\
+                    &                       & \hspace{36mm} PICT, Pune
+\end{tabular}
+\end{table}
+\end{center}
+Place:
+\linebreak
+Date:
+\end{titlepage}
+\newpage
+\begin{titlepage}
+
+
+\begin{center}
+\section*{\\ACKNOWLEDGEMENT}  
+\vspace{30pt}
+\end{center}
+
+\large
+\hspace{0.5cm}
+I would like to express my gratitude and appreciation to all those who
+gave me the possibility to complete this report. Special thanks is due to my
+Guide Mr. Sachin S. Pande and Reviewer Ms. Deepa Sapkal whose help, stimulating suggestions
+and encouragement helped me in all time of fabrication process and in writing
+this report. 
+\par
+\vspace{0.25cm} I would also like to thank my Internship Company Mentor Mr. Darshan Bhalodiya
+to continuously help me through the course of making this report
+and also providing resources to complete the tasks.
+\par
+Many thanks to the PICT faculty and Dr A.S Ghotkar Mam Head of Information Technology department for providing me the opportunity to complete my Internship and present this report by providing all the resources required. 
+\vspace{0.25cm}
+\par 
+\linebreak
+\vspace{5cm}
+\begin{flushright}
+\includegraphics[scale=0.07]{sign} \linebreak 
+Pranish Warke
+\end{flushright}\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+\newpage
+
+\begin{center}
+    \section{Title}
+    Web Development Internship at TechGigs LLP
+\end{center}
+\
+\begin{center}
+    \section{Introduction}
+\end{center}
+\hspace{10mm}This Internship was offered by TechGigs in the domain of Web Development which focused on both backend and frontend web application development. Mode of Internship was onsite at TechGigs office located at Karve Road, Kothrud, Pune – 411038. It was a 4-week unpaid program focused on learning and implementing various popular web development technologies in projects and tasks assigned. This internship was carried out under the supervision of Mr. Darshan Bhalodiya, Founder of TechGigs LLP. The internship commenced on 21/2/2023 and was completed successfully on 21/3/2023. Two Projects in web development were assigned during the period of internship. \\\\
+\hspace*{10mm}Tech Stack used in First Project was Django Python web framework to develop a backend Music Player API (Application Programming Interface). Django is an open-source web framework written in Python that follows the model-view-controller (MVC) architectural pattern. MVC stands for Model-View-Controller, which is a software architectural pattern used to separate an application's concerns into three interconnected components: the Model, the View, and the Controller. Django REST framework was used to develop functionalities in Music Player API. \\\\
+\hspace*{10mm}Tech Stack used in Second Project was React JS frontend framework to integrate and fetch backend API (Application Programming Interface). React API integration refers to the process of connecting a React front-end application to an external API (Application Programming Interface) in order to exchange data between the two. APIs are used to allow different software applications to communicate with each other and share data. Postman Collection was provided by the client with demo data to test backend API. Postman is used to test each route from backend application before integrating with user interface.\\\\
+\newpage
+
+\begin{center}
+    \section{Problem Statement}
+\end{center}
+\subsection{PROJECT 1 : DJANGO Backend API}
+ \hspace*{10mm}Objective of this project was to create a backend music API . Functionalities to be implemented :-
+ \begin{enumerate}
+    \item Store list of songs and albums with their attributes in a database.
+    \item Store information about users in a database.
+    \item Create User Login and Signup functionality, also authenticate logged in user.
+    \item Users can create playlists of songs and albums – users can like songs and albums – user can follow other users.
+    \item User can create, add songs in the playlists and delete playlists.
+    \item Apply filter on songs and albums in the Music Player using various attributes, likes, etc.
+\end{enumerate}
+\subsection{PROJECT 2 : REACT JS API Integration}
+\hspace*{10mm}Objective of this project was to integrate backend API already created in frontend (user interface) to develop a fully functioning food ordering and delivery website for DhoklaHouse Sweet and Namkeen Pvt. Ltd. Tasks implemented in this project :-
+\begin{enumerate}
+    \item Fetch routes for Admin and User Registration, Sign in and Sign out .
+    \item Fetch routes for adding product to user wish list, removing product from user wish list.
+    \item Add Logged in or registered user Authorisation functionality to every page of the website.
+\end{enumerate}
+\vspace{20pt}
+\newpage
+\begin{center}
+    \section{Objectives and Scope}
+\end{center}
+\subsection{Objectives}
+\begin{enumerate}
+    \item To understand the problem statement and client requirements in depth.
+    \item To learn about the technology used to develop web applications along with implementation.
+    \item Develop a Music Player backend API using Django and Python. Store the user,song,album and playlist data in a database. Users can create playlists of songs and albums – users can like songs and albums – user can follow other users. User can create, add songs in the playlists and delete playlists.
+    \item Apply filter on songs and albums in the Music Player using various at-
+tributes, likes, etc.
+    \item Integrate backend API already created in
+frontend (user interface) to develop a fully functioning food ordering and delivery
+website for DhoklaHouse Sweet and Namkeen Pvt. Ltd.
+\end{enumerate}
+\subsection{Scope}
+\hspace{10mm}Exploring different web technologies and using them to solve
+real world problems. To gain knowledge of Django and Django Rest Framework. To
+understand how to integrate Front-end with Back-end. Also to learn
+how to fetch data from APIs in React JS.\\\\
+\hspace*{10mm}ReactJS scope is wide and diverse, allowing developers to build powerful and dynamic web applications with advanced features and functionality. With its popularity and active community support, ReactJS is expected to continue to evolve and expand its scope in the future. \\\\
+\hspace*{10mm} Django is a popular choice for web development. With its scalability, versatility, and security features, Django is well-suited for building complex and high-traffic web applications. Additionally, its active community and rich ecosystem of third-party libraries and plugins make it a powerful tool for developers.
+\newpage
+\section{Methodological Details}
+\subsection{PROJECT 1 Implementation Details}
+\hspace*{10mm} The language used for implementation is Python. Django is a free and open-source web framework written in Python that follows the model-view-controller (MVC) architectural pattern. It is designed to help developers build web applications quickly and with less code, by providing a high-level, reusable set of components and tools. \\ 
+\subsubsection{Building Backend API}
+\hspace*{10mm} MVC Architecture – \\
+\hspace*{10mm} A software design pattern called MVC (Model-View-Controller) divides an application's logic into three interconnected parts: the model, the view, and the controller. \\
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1.0]{MVC Pattern.jpg}
+    \caption{MVC Architecture}
+    %\label{fig:my_label}
+\end{figure}
+\\ Model: The model represents the application's data and business logic. In Django, models are defined as Python classes that are inherited from the `django.db.models.Model` class. They specify the fields and methods for interacting with the underlying database.\\
+ View: The view handles user requests and returns an HTTP response. It processes user input, retrieves data from the model, and passes it to the template for rendering. In Django, views are Python functions or classes that are responsible for handling different types of requests.\\\\
+Controller: The controller is responsible for handling user input and directing the flow of data between the model and the view. \\
+
+\subsubsection{Adding Functionality}
+\hspace*{10mm}Django Rest Framework – \\
+\hspace*{10mm} Django REST Framework (DRF) is used for building web APIs in the Django framework, which is a popular Python web development framework. Implementing Django REST Framework (DRF) involves several key steps and considerations. Here are some methodological details to keep in mind: 
+\begin{enumerate}
+    \item \textbf{Installation:} First, you need to install DRF using pip, the Python package installer. You can do this by running the command pip install djangorestframework.
+    \item \textbf{Serialization:} DRF uses serializers to convert complex data types (such as Django models) into JSON or other formats that can be easily transmitted over the web. You can define your own custom serializers or use DRF's built-in ones.
+    \item \textbf{Views:} DRF provides a variety of view classes to handle different types of requests, such as APIView for handling generic API requests, ModelViewSet for handling CRUD operations on a model, and ViewSet for handling more complex operations. You can also create your own custom views by subclassing these base classes.
+    \item \textbf{Authentication:} DRF provides a flexible authentication system that can be easily customized to suit your needs. You can use built-in authentication schemes (such as token authentication or session authentication) or define your own custom authentication classes.
+\end{enumerate} 
+\newpage
+\subsection{PROJECT 2 Implementation Details}
+\hspace*{10mm} The framework used for implementing the second project is React JS. React JS is a JavaScript library for building user interfaces (UIs). It was developed by Facebook and was first released in 2013. React is a popular choice for building web applications because it makes it easy to create complex, interactive UIs using a component-based architecture.\\
+
+\subsubsection{Identify and Test HTTP Requests}
+\hspace*{10mm}Postman – \\
+\hspace*{10mm} Postman is a popular tool for testing APIs and creating API documentation. Postman collections are a way to group related API requests together, making it easier to organize and share API tests and documentation. A collection of HTTP requests used in the API can be tested and verified using Postman.\\
+
+\subsubsection{Fetching and Integrating Backend API}
+\hspace*{10mm}HTTP Requests – \\
+\hspace{10mm} HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the web. It is a request-response protocol used to transmit data between a client and server. There are several types of HTTP requests, including:
+\begin{enumerate}
+    \item \textbf{GET:} The GET request method is used to retrieve data from a server.
+    \item \textbf{POST:} The POST request method is used to submit data to a server. It is often used for submitting form data or uploading files.
+    \item \textbf{PUT:} The PUT request method is used to update an existing resource on the server.
+    \item \textbf{DELETE:} The DELETE request method is used to delete a resource from the server.
+     \item \textbf{PATCH:} The PATCH request method is used to update a part of an existing resource on the server.
+\end{enumerate} 
+\subsubsection{Fetch Data from React User Interface}
+\begin{enumerate}
+    \item \textbf{useForm hook:} useForm is a custom hook for managing forms with ease. It takes one object as optional argument.
+    \item \textbf{useState hook:} The React useState Hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.
+\end{enumerate} 
+
+\newpage
+
+\section{Modern engineering tools used }
+\begin{enumerate}
+    \item \textbf{Django -} Django is a high-level Python web framework that allows developers to build web applications quickly and efficiently. It is an open-source framework that follows the Model-View-Controller (MVC) architectural pattern, and it is designed to make it easy to build complex, database-driven websites.
+    \item \textbf{React JS -} React is a popular choice for building modern, dynamic web applications because it allows developers to create reusable UI components and easily manage the state of those components. It uses a declarative approach, which means that developers describe the desired output and React takes care of updating the user interface when the state of the component changes.
+    \item \textbf{Postman -} With Postman, developers can create and save collections of API requests, organize requests into folders, and share collections with other team members. Postman also provides a user-friendly interface for building and customizing API requests, with support for various HTTP methods (such as GET, POST, PUT, DELETE), headers, and parameters.
+    \item\textbf{Git and GitHub -} Git is a distributed version control system that allows developers to manage changes to their code over time. GitHub is a web-based platform that provides hosting for software development version control using Git. It is a popular platform used by developers to collaborate on code and manage their code repositories.
+    \item\textbf{Visual Studio Code -} Visual Studio Code (often abbreviated as VS Code) is a popular open-source code editor developed by Microsoft. It is a lightweight and cross-platform editor that runs on Windows, Linux, and macOS. VS Code is designed for developers of all skill levels and supports a wide range of programming languages, including JavaScript, Python, C++, and more. It offers a number of features to improve developer productivity, including intelligent code completion, debugging tools, and extensions that can be installed to add additional functionality.
+\end{enumerate}
+
+\newpage
+
+\section{Outcome/ results of internship work (screenshots of work done)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1.0,frame]{django result.png}
+    \caption{Django API}
+    %\label{fig:my_label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.70,frame]{django models.png}
+    \caption{Django Database Tables}
+    %\label{fig:my_label}
+\end{figure} 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.60,frame]{postman routes.png}
+    \caption{Postman DhoklaHouse API}
+    %\label{fig:my_label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.34,frame]{dhoklahouse UI.png}
+    \caption{React DhoklaHouse Login}
+    %\label{fig:my_label}
+    
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.33,frame]{dhoklahouse wishlist.png}
+    \caption{React DhoklaHouse Wishlist}
+    %\label{fig:my_label}
+    
+\end{figure}
+
+\section{Any achievement (Job opportunity, project sponsorship, patent, commercial
+product, research publications, pre-placement offers, a strong professional
+network etc.)}
+\hspace{10mm} Contributed to developing a successful commercial product DhoklaHouse Sweets and Namkeen website.
+
+\end{document}
+
+
+
+
+
+
+
+
+
